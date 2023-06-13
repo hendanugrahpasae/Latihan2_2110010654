@@ -1,13 +1,18 @@
 package universitas;
 
 public class Mahasiswa {
-    init__(mhs, npm, nama, prodi):
-        mhs.npm = npm
-        mhs.nama = nama
-        mhs.prodi = prodi
+    private String npm;
+    private String nama;
+    private String prodi;
     
-    get_detail(self):
-        detail = "NPM: {}\Nama: {}\nProdi: {}".format(mhs.npm, mhs.nama, mhs.prodi)
-        return detail
+    public Mahasiswa(String npm, String nama, String prodi) {
+        this.npm = npm;
+        this.nama = nama;
+        this.prodi = prodi;
+    }
+    
+    public String getDetail() {
+        return "NPM: " + npm + "\nNama: " + nama + "\nProdi: " + prodi;
+    }
 }
 
